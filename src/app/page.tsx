@@ -162,18 +162,48 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-4 md:gap-6">
             {[
-              { name: 'React', icon: '⚛️' },
-              { name: 'Next.js', icon: '▲' },
-              { name: 'TypeScript', icon: 'TS' },
-              { name: 'Node.js', icon: '🟢' },
-              { name: 'Python', icon: '🐍' },
-              { name: 'AWS', icon: '☁️' }
+              { name: 'JavaScript', icon: 'js' },
+              { name: 'TypeScript', icon: 'ts' },
+              { name: 'Go', icon: 'go' },
+              { name: 'Python', icon: 'python' },
+              { name: 'Java', icon: 'java' },
+              { name: 'React', icon: 'react' },
+              { name: 'Next.js', icon: 'nextjs' },
+              { name: 'Redux', icon: 'redux' },
+              { name: 'HTML', icon: 'html' },
+              { name: 'CSS', icon: 'css' },
+              { name: 'Bootstrap', icon: 'bootstrap' },
+              { name: 'Tailwind', icon: 'tailwind' },
+              { name: 'Apollo', icon: 'apollo' },
+              { name: 'Node.js', icon: 'nodejs' },
+              { name: 'Express', icon: 'express' },
+              { name: 'GraphQL', icon: 'graphql' },
+              { name: 'Sequelize', icon: 'sequelize' },
+              { name: 'MongoDB', icon: 'mongodb' },
+              { name: 'PostgreSQL', icon: 'postgres' },
+              { name: 'MySQL', icon: 'mysql' },
+              { name: 'Redis', icon: 'redis' },
+              { name: 'RabbitMQ', icon: 'rabbitmq' },
+              { name: 'Django', icon: 'django' },
+              { name: 'FastAPI', icon: 'fastapi' },
+              { name: 'Docker', icon: 'docker' },
+              { name: 'Kubernetes', icon: 'kubernetes' },
+              { name: 'Nginx', icon: 'nginx' },
+              { name: 'AWS', icon: 'aws' },
+              { name: 'GCP', icon: 'gcp' },
+              { name: 'Git', icon: 'git' }
             ].map((tech, index) => (
-              <div key={index} className="group flex flex-col items-center p-6 bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-110">
-                <div className="text-4xl mb-4 group-hover:scale-125 transition-transform duration-300">{tech.icon}</div>
-                <h3 className="text-white font-semibold">{tech.name}</h3>
+              <div key={index} className="group flex flex-col items-center p-3 md:p-4 bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-110 hover:bg-gradient-to-br hover:from-gray-700/40 hover:to-gray-800/40">
+                <div className="w-10 h-10 md:w-12 md:h-12 mb-2 md:mb-3 group-hover:scale-125 transition-transform duration-300 flex items-center justify-center">
+                  <img 
+                    src={`https://skillicons.dev/icons?i=${tech.icon}`} 
+                    alt={tech.name}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <h3 className="text-white font-medium text-xs md:text-sm text-center">{tech.name}</h3>
               </div>
             ))}
           </div>
