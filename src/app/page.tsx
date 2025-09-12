@@ -357,7 +357,7 @@ export default function Home() {
                   </svg>
                 </div>
                 <h3 className="text-white font-semibold mb-2">Phone</h3>
-                <p className="text-gray-300">+62 XXX XXXX XXXX</p>
+                <p className="text-gray-300">+62 851-7511-1378</p>
               </div>
               
               <div className="flex flex-col items-center">
