@@ -7,18 +7,18 @@ export default function Home() {
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-blue-500/5 rounded-full blur-2xl animate-bounce delay-500"></div>
-        
+
         {/* Geometric shapes */}
-        <div className="absolute top-20 right-20 w-4 h-4 bg-purple-400 rotate-45 animate-spin" style={{animationDuration: '20s'}}></div>
+        <div className="absolute top-20 right-20 w-4 h-4 bg-purple-400 rotate-45 animate-spin" style={{ animationDuration: '20s' }}></div>
         <div className="absolute bottom-32 left-16 w-6 h-6 bg-white/20 rotate-45 animate-ping"></div>
         <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-purple-300 rounded-full animate-pulse"></div>
-        
+
         {/* Grid pattern */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-500/5 to-transparent" 
-             style={{
-               backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(147, 51, 234, 0.1) 1px, transparent 0)',
-               backgroundSize: '50px 50px'
-             }}>
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-500/5 to-transparent"
+          style={{
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(147, 51, 234, 0.1) 1px, transparent 0)',
+            backgroundSize: '50px 50px'
+          }}>
         </div>
       </div>
 
@@ -47,7 +47,7 @@ export default function Home() {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-purple-600 group-hover:w-full transition-all duration-300"></span>
               </a>
             </div>
-            
+
             {/* Mobile Menu Button */}
             <button className="md:hidden text-gray-300 hover:text-white">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -56,7 +56,7 @@ export default function Home() {
             </button>
           </nav>
         </div>
-        
+
         {/* Gradient bottom border */}
         <div className="h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
       </header>
@@ -85,8 +85,8 @@ export default function Home() {
               Professional Software Solutions
             </h2>
             <p className="text-xl md:text-2xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
-              Kami menghadirkan solusi perangkat lunak yang inovatif dan berkualitas tinggi. 
-              Dari konsep hingga implementasi, kami membantu bisnis Anda bertransformasi digital 
+              Kami menghadirkan solusi perangkat lunak yang inovatif dan berkualitas tinggi.
+              Dari konsep hingga implementasi, kami membantu bisnis Anda bertransformasi digital
               dengan teknologi terdepan dan pendekatan yang profesional.
             </p>
           </div>
@@ -162,50 +162,48 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-4 md:gap-6">
-            {[
-              { name: 'JavaScript', icon: 'js' },
-              { name: 'TypeScript', icon: 'ts' },
-              { name: 'Go', icon: 'go' },
-              { name: 'Python', icon: 'python' },
-              { name: 'Java', icon: 'java' },
-              { name: 'React', icon: 'react' },
-              { name: 'Next.js', icon: 'nextjs' },
-              { name: 'Redux', icon: 'redux' },
-              { name: 'HTML', icon: 'html' },
-              { name: 'CSS', icon: 'css' },
-              { name: 'Bootstrap', icon: 'bootstrap' },
-              { name: 'Tailwind', icon: 'tailwind' },
-              { name: 'Apollo', icon: 'apollo' },
-              { name: 'Node.js', icon: 'nodejs' },
-              { name: 'Express', icon: 'express' },
-              { name: 'GraphQL', icon: 'graphql' },
-              { name: 'Sequelize', icon: 'sequelize' },
-              { name: 'MongoDB', icon: 'mongodb' },
-              { name: 'PostgreSQL', icon: 'postgres' },
-              { name: 'MySQL', icon: 'mysql' },
-              { name: 'Redis', icon: 'redis' },
-              { name: 'RabbitMQ', icon: 'rabbitmq' },
-              { name: 'Django', icon: 'django' },
-              { name: 'FastAPI', icon: 'fastapi' },
-              { name: 'Docker', icon: 'docker' },
-              { name: 'Kubernetes', icon: 'kubernetes' },
-              { name: 'Nginx', icon: 'nginx' },
-              { name: 'AWS', icon: 'aws' },
-              { name: 'GCP', icon: 'gcp' },
-              { name: 'Git', icon: 'git' }
-            ].map((tech, index) => (
-              <div key={index} className="group flex flex-col items-center p-3 md:p-4 bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-110 hover:bg-gradient-to-br hover:from-gray-700/40 hover:to-gray-800/40">
-                <div className="w-10 h-10 md:w-12 md:h-12 mb-2 md:mb-3 group-hover:scale-125 transition-transform duration-300 flex items-center justify-center">
-                  <img 
-                    src={`https://skillicons.dev/icons?i=${tech.icon}`} 
-                    alt={tech.name}
-                    className="w-full h-full object-contain"
-                  />
+          <div className="flex justify-center">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 gap-4 md:gap-6 justify-items-center">
+              {[
+                { name: 'JavaScript', icon: 'js' },
+                { name: 'TypeScript', icon: 'ts' },
+                { name: 'Go', icon: 'go' },
+                { name: 'Python', icon: 'python' },
+                { name: 'PHP', icon: 'php' },
+                { name: 'WordPress', icon: 'wordpress' },
+                { name: 'Java', icon: 'java' },
+                { name: 'React', icon: 'react' },
+                { name: 'Next.js', icon: 'nextjs' },
+                { name: 'Apollo', icon: 'apollo' },
+                { name: 'Node.js', icon: 'nodejs' },
+                { name: 'Express', icon: 'express' },
+                { name: 'GraphQL', icon: 'graphql' },
+                { name: 'Sequelize', icon: 'sequelize' },
+                { name: 'MongoDB', icon: 'mongodb' },
+                { name: 'PostgreSQL', icon: 'postgres' },
+                { name: 'MySQL', icon: 'mysql' },
+                { name: 'Redis', icon: 'redis' },
+                { name: 'RabbitMQ', icon: 'rabbitmq' },
+                { name: 'Django', icon: 'django' },
+                { name: 'FastAPI', icon: 'fastapi' },
+                { name: 'Docker', icon: 'docker' },
+                { name: 'Kubernetes', icon: 'kubernetes' },
+                { name: 'Nginx', icon: 'nginx' },
+                { name: 'AWS', icon: 'aws' },
+                { name: 'GCP', icon: 'gcp' }
+              ].map((tech, index) => (
+                <div key={index} className="group flex flex-col items-center p-3 md:p-4 bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-110 hover:bg-gradient-to-br hover:from-gray-700/40 hover:to-gray-800/40">
+                  <div className="w-10 h-10 md:w-12 md:h-12 mb-2 md:mb-3 group-hover:scale-125 transition-transform duration-300 flex items-center justify-center">
+                    <img
+                      src={`https://skillicons.dev/icons?i=${tech.icon}`}
+                      alt={tech.name}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <h3 className="text-white font-medium text-xs md:text-sm text-center">{tech.name}</h3>
                 </div>
-                <h3 className="text-white font-medium text-xs md:text-sm text-center">{tech.name}</h3>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -315,7 +313,7 @@ export default function Home() {
             <p className="text-xl text-gray-300 mb-12">
               Mari diskusikan bagaimana kami dapat membantu mewujudkan visi teknologi Anda
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
               <button className="group bg-gradient-to-r from-purple-600 to-purple-700 text-white px-12 py-4 rounded-full font-semibold text-lg hover:from-purple-700 hover:to-purple-800 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-purple-500/25">
                 <span className="flex items-center justify-center gap-3">
@@ -349,7 +347,7 @@ export default function Home() {
                 <h3 className="text-white font-semibold mb-2">Email</h3>
                 <p className="text-gray-300">hello@kancralabs.com</p>
               </div>
-              
+
               <div className="flex flex-col items-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -359,7 +357,7 @@ export default function Home() {
                 <h3 className="text-white font-semibold mb-2">Phone</h3>
                 <p className="text-gray-300">+62 851-7511-1378</p>
               </div>
-              
+
               <div className="flex flex-col items-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center mb-4">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -385,7 +383,7 @@ export default function Home() {
                 Kancra Labs
               </div>
               <p className="text-gray-300 mb-6 max-w-md">
-                Menghadirkan solusi perangkat lunak inovatif untuk transformasi digital bisnis Anda. 
+                Menghadirkan solusi perangkat lunak inovatif untuk transformasi digital bisnis Anda.
                 Berpengalaman dalam teknologi terdepan dengan pendekatan profesional.
               </p>
               <div className="flex space-x-4">
