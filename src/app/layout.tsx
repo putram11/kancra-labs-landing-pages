@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kancra Labs - Innovation Meets Excellence",
-  description: "Kancra Labs builds cutting-edge solutions that transform ideas into reality. Innovation meets excellence in everything we create.",
+  title: "Kancra Labs - Professional Software Solutions",
+  description: "Kancra Labs menghadirkan solusi perangkat lunak profesional yang inovatif. Dari custom development hingga enterprise solutions, kami membantu transformasi digital bisnis Anda dengan teknologi terdepan.",
 };
 
 export default function RootLayout({
