@@ -37,10 +37,10 @@ export default function Header() {
               {t('nav.services')}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-purple-600 group-hover:w-full transition-all duration-300"></span>
             </button>
-            <Link href="/portfolio" className="relative group text-gray-300 hover:text-white transition-all duration-300">
+            <button onClick={() => scrollToSection('portfolio')} className="relative group text-gray-300 hover:text-white transition-all duration-300">
               {t('nav.portfolio')}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-purple-600 group-hover:w-full transition-all duration-300"></span>
-            </Link>
+            </button>
             <button onClick={() => scrollToSection('contact')} className="relative group text-gray-300 hover:text-white transition-all duration-300">
               {t('nav.contact')}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-purple-600 group-hover:w-full transition-all duration-300"></span>
@@ -97,13 +97,15 @@ export default function Header() {
               >
                 {t('nav.services')}
               </button>
-              <Link 
-                href="/portfolio" 
-                className="text-gray-300 hover:text-white transition-all duration-300 py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
+              <button 
+                onClick={() => {
+                  scrollToSection('portfolio');
+                  setIsMobileMenuOpen(false);
+                }}
+                className="text-gray-300 hover:text-white transition-all duration-300 py-2 text-left"
               >
                 {t('nav.portfolio')}
-              </Link>
+              </button>
               <button 
                 onClick={() => {
                   scrollToSection('contact');

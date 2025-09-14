@@ -24,32 +24,19 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-purple-900 overflow-x-hidden">
-      {/* Enhanced Animated background elements */}
+      {/* Lightweight background elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        {/* Floating orbs with improved animations */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-blue-500/5 rounded-full blur-2xl animate-bounce delay-500"></div>
-        <div className="absolute top-3/4 left-1/3 w-48 h-48 bg-pink-500/5 rounded-full blur-3xl animate-pulse delay-2000"></div>
-
-        {/* Geometric shapes with more variety */}
-        <div className="absolute top-20 right-20 w-4 h-4 bg-purple-400 rotate-45 animate-spin" style={{ animationDuration: '20s' }}></div>
-        <div className="absolute bottom-32 left-16 w-6 h-6 bg-white/20 rotate-45 animate-ping"></div>
-        <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-purple-300 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-1/3 left-1/4 w-3 h-3 bg-blue-400 animate-ping delay-1000"></div>
-        <div className="absolute top-2/3 right-1/4 w-1 h-1 bg-white animate-pulse delay-2000"></div>
-
-        {/* Animated grid pattern */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-500/5 to-transparent"
+        {/* Simple floating orbs - reduced blur and animation */}
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-500/5 rounded-full blur-xl opacity-50"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-purple-600/5 rounded-full blur-xl opacity-30"></div>
+        
+        {/* Minimal grid pattern */}
+        <div className="absolute inset-0 opacity-30"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(147, 51, 234, 0.1) 1px, transparent 0)',
-            backgroundSize: '50px 50px'
+            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(147, 51, 234, 0.05) 1px, transparent 0)',
+            backgroundSize: '100px 100px'
           }}>
         </div>
-
-        {/* Moving gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-transparent to-blue-500/5 animate-pulse" 
-          style={{ animationDuration: '8s' }}></div>
       </div>
 
       <Header />
@@ -118,41 +105,38 @@ export default function Home() {
               </div>
             </AnimatedSection>
 
-            {/* Enhanced Feature Highlights */}
-            <StaggeredContainer className="grid md:grid-cols-3 gap-8 mt-20" staggerDelay={200}>
-              <div className="group bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-20 h-20 bg-purple-500/10 rounded-full -translate-y-10 translate-x-10"></div>
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 relative z-10">
+            {/* Lightweight Feature Highlights */}
+            <div className="grid md:grid-cols-3 gap-8 mt-20">
+              <div className="bg-gray-800/40 p-8 rounded-2xl border border-gray-700/50 hover:border-purple-500/50 transition-colors duration-200">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4 relative z-10">{t('feature.custom.title')}</h3>
-                <p className="text-gray-300 leading-relaxed relative z-10">{t('feature.custom.desc')}</p>
+                <h3 className="text-2xl font-bold text-white mb-4">{t('feature.custom.title')}</h3>
+                <p className="text-gray-300 leading-relaxed">{t('feature.custom.desc')}</p>
               </div>
 
-              <div className="group bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-20 h-20 bg-blue-500/10 rounded-full -translate-y-10 translate-x-10"></div>
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 relative z-10">
+              <div className="bg-gray-800/40 p-8 rounded-2xl border border-gray-700/50 hover:border-purple-500/50 transition-colors duration-200">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4 relative z-10">{t('feature.performance.title')}</h3>
-                <p className="text-gray-300 leading-relaxed relative z-10">{t('feature.performance.desc')}</p>
+                <h3 className="text-2xl font-bold text-white mb-4">{t('feature.performance.title')}</h3>
+                <p className="text-gray-300 leading-relaxed">{t('feature.performance.desc')}</p>
               </div>
 
-              <div className="group bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-20 h-20 bg-green-500/10 rounded-full -translate-y-10 translate-x-10"></div>
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 relative z-10">
+              <div className="bg-gray-800/40 p-8 rounded-2xl border border-gray-700/50 hover:border-purple-500/50 transition-colors duration-200">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6">
                   <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4 relative z-10">{t('feature.secure.title')}</h3>
-                <p className="text-gray-300 leading-relaxed relative z-10">{t('feature.secure.desc')}</p>
+                <h3 className="text-2xl font-bold text-white mb-4">{t('feature.secure.title')}</h3>
+                <p className="text-gray-300 leading-relaxed">{t('feature.secure.desc')}</p>
               </div>
-            </StaggeredContainer>
+            </div>
           </div>
         </div>
       </section>
@@ -200,8 +184,8 @@ export default function Home() {
                   { name: 'AWS', icon: 'aws' },
                   { name: 'GCP', icon: 'gcp' }
                 ].map((tech, index) => (
-                  <div key={index} className="group flex flex-col items-center p-3 md:p-4 bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-110 hover:bg-gradient-to-br hover:from-gray-700/40 hover:to-gray-800/40">
-                    <div className="w-10 h-10 md:w-12 md:h-12 mb-2 md:mb-3 group-hover:scale-125 transition-transform duration-300 flex items-center justify-center">
+                  <div key={index} className="flex flex-col items-center p-3 md:p-4 bg-gray-800/30 rounded-xl border border-gray-700/30 hover:border-purple-500/50 transition-colors duration-200">
+                    <div className="w-10 h-10 md:w-12 md:h-12 mb-2 md:mb-3 flex items-center justify-center">
                       <img
                         src={`https://skillicons.dev/icons?i=${tech.icon}`}
                         alt={tech.name}
@@ -368,11 +352,9 @@ export default function Home() {
                 color: 'from-yellow-500 to-orange-600'
               }
             ].map((service, index) => (
-              <div key={index} className="group bg-gradient-to-br from-gray-800/40 to-gray-900/40 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50 hover:border-purple-500/50 transition-all duration-500 hover:transform hover:scale-105 relative overflow-hidden h-full min-h-[280px] flex flex-col">
-                <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${service.color} opacity-10 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500`}>
-                </div>
-                <div className="relative z-10 flex flex-col h-full">
-                  <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
+              <div key={index} className="bg-gray-800/40 p-8 rounded-2xl border border-gray-700/50 hover:border-purple-500/50 transition-colors duration-200 h-full min-h-[280px] flex flex-col">
+                <div className="flex flex-col h-full">
+                  <div className="text-5xl mb-6">{service.icon}</div>
                   <h3 className="text-2xl font-bold text-white mb-4">{t(service.titleKey)}</h3>
                   <p className="text-gray-300 leading-relaxed flex-grow">{t(service.descKey)}</p>
                 </div>
@@ -381,24 +363,24 @@ export default function Home() {
           </StaggeredContainer>
 
           {/* CTA Button */}
-          <AnimatedSection animation="fadeInUp" delay={800} className="text-center mt-16">
-            <button onClick={() => scrollToSection('contact')} className="group bg-gradient-to-r from-purple-600 to-purple-700 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-purple-700 hover:to-purple-800 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-purple-500/25">
+          <div className="text-center mt-16">
+            <button onClick={() => scrollToSection('contact')} className="bg-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-purple-700 transition-colors duration-200">
               <span className="flex items-center justify-center gap-3">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                 </svg>
                 {t('services.cta')}
-                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </span>
             </button>
-          </AnimatedSection>
+          </div>
         </div>
       </section>
 
       {/* Portfolio Preview Section */}
-      <section className="relative z-10 py-20 bg-gradient-to-r from-black/20 to-purple-900/20">
+      <section id="portfolio" className="relative z-10 py-20 bg-gradient-to-r from-black/20 to-purple-900/20">
         <div className="container mx-auto px-6">
           <AnimatedSection animation="fadeInUp" className="text-center mb-16">
             <div className="inline-block mb-8">
@@ -526,7 +508,7 @@ export default function Home() {
                   </svg>
                 </span>
               </Link>
-              <button className="group border-2 border-purple-500 text-purple-300 hover:text-white px-12 py-4 rounded-full font-semibold text-lg hover:bg-purple-500/10 transition-all duration-300 transform hover:scale-105">
+              <button className="border-2 border-purple-500 text-purple-300 hover:text-white px-12 py-4 rounded-full font-semibold text-lg hover:bg-purple-500/10 transition-colors duration-200">
                 <span className="flex items-center justify-center gap-3">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
@@ -538,9 +520,9 @@ export default function Home() {
           </AnimatedSection>
 
           {/* Contact Info */}
-          <StaggeredContainer className="grid md:grid-cols-3 gap-8" staggerDelay={150}>
-            <div className="text-center group">
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
@@ -549,8 +531,8 @@ export default function Home() {
               <p className="text-gray-300">hello@kancralabs.com</p>
             </div>
 
-            <div className="text-center group">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
@@ -559,8 +541,8 @@ export default function Home() {
               <p className="text-gray-300">+62 851-7511-1378</p>
             </div>
 
-            <div className="text-center group">
-              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all duration-300">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -569,7 +551,7 @@ export default function Home() {
               <h3 className="text-xl font-bold text-white mb-2">{t('contact.location')}</h3>
               <p className="text-gray-300">Jakarta, Indonesia</p>
             </div>
-          </StaggeredContainer>
+          </div>
         </div>
       </section>
 

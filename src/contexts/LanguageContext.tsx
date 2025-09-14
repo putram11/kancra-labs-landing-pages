@@ -185,7 +185,7 @@ const translations = {
     'feature.custom.title': 'Custom Development',
     'feature.custom.desc': 'Custom software solutions built specifically for your business needs with modern and scalable technology.',
     'feature.performance.title': 'High Performance',
-    'feature.performance.desc': 'High-performance applications optimized to deliver superior user experience.',
+    'feature.performance.desc': 'High-performance applications optimized to deliver superior user experience and much more.',
     'feature.secure.title': 'Secure & Reliable',
     'feature.secure.desc': 'Enterprise-level security with reliable infrastructure to support your business operations.',
     
