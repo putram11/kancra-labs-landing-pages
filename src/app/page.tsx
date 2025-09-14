@@ -439,14 +439,12 @@ export default function Home() {
                 color: 'from-orange-500 to-red-600'
               }
             ].map((project, index) => (
-              <div key={index} className="group bg-gradient-to-br from-gray-800/40 to-gray-900/40 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50 hover:border-purple-500/50 transition-all duration-500 hover:transform hover:scale-105 relative overflow-hidden">
-                <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${project.color} opacity-10 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500`}>
-                </div>
-                <div className="relative z-10">
-                  <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300">{project.image}</div>
-                  <h3 className="text-xl font-bold text-white mb-3">{t(project.titleKey)}</h3>
-                  <p className="text-gray-300 text-sm mb-4 leading-relaxed">{t(project.descKey)}</p>
-                  <div className="flex flex-wrap gap-2 mb-4">
+              <div key={index} className="group bg-gradient-to-br from-gray-800/40 to-gray-900/40 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50 hover:border-purple-500/50 transition-all duration-500 hover:transform hover:scale-105 relative overflow-hidden h-full min-h-[320px] flex flex-col">
+                <div className="relative z-10 flex flex-col h-full">
+                  <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300 text-center">{project.image}</div>
+                  <h3 className="text-xl font-bold text-white mb-3 text-center">{t(project.titleKey)}</h3>
+                  <p className="text-gray-300 text-sm mb-4 leading-relaxed text-center flex-grow">{t(project.descKey)}</p>
+                  <div className="flex flex-wrap gap-2 justify-center mt-auto">
                     {project.tech.map((tech, techIndex) => (
                       <span key={techIndex} className="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-xs font-medium border border-purple-500/30">
                         {tech}
@@ -460,16 +458,11 @@ export default function Home() {
 
           {/* View More Button */}
           <AnimatedSection animation="fadeInUp" delay={600} className="text-center">
-            <Link href="/portfolio" className="group bg-gradient-to-r from-purple-600 to-purple-700 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-purple-700 hover:to-purple-800 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-purple-500/25">
-              <span className="flex items-center justify-center gap-3">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0l-4-4m4 4l-4 4" />
-                </svg>
-                {t('portfolio.viewAll')}
-                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </span>
+            <Link href="/portfolio" className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200">
+              {t('portfolio.viewAll')}
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
             </Link>
           </AnimatedSection>
         </div>
