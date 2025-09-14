@@ -5,109 +5,72 @@ import Footer from '@/components/Footer';
 import { useLanguage } from '@/contexts/LanguageContext';
 import Link from 'next/link';
 
-// Sample portfolio data
-const portfolioItems = [
-  {
-    id: 1,
-    title: {
-      id: 'E-Commerce Platform',
-      en: 'E-Commerce Platform'
-    },
-    description: {
-      id: 'Platform e-commerce modern dengan fitur lengkap, payment gateway terintegrasi, dan dashboard admin yang powerful.',
-      en: 'Modern e-commerce platform with complete features, integrated payment gateway, and powerful admin dashboard.'
-    },
-    image: '/api/placeholder/400/300',
-    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'PostgreSQL', 'Stripe'],
-    githubUrl: 'https://github.com/kancralabs/ecommerce-platform',
-    demoUrl: 'https://ecommerce-demo.kancralabs.com',
-    category: 'Web Development'
-  },
-  {
-    id: 2,
-    title: {
-      id: 'Mobile Banking App',
-      en: 'Mobile Banking App'
-    },
-    description: {
-      id: 'Aplikasi mobile banking dengan keamanan tinggi, fitur transfer, pembayaran, dan notifikasi real-time.',
-      en: 'Mobile banking app with high security, transfer features, payments, and real-time notifications.'
-    },
-    image: '/api/placeholder/400/300',
-    technologies: ['React Native', 'Node.js', 'MongoDB', 'Socket.io'],
-    githubUrl: 'https://github.com/kancralabs/mobile-banking',
-    demoUrl: 'https://banking-demo.kancralabs.com',
-    category: 'Mobile Development'
-  },
-  {
-    id: 3,
-    title: {
-      id: 'AI Chat Assistant',
-      en: 'AI Chat Assistant'
-    },
-    description: {
-      id: 'Chatbot AI yang cerdas untuk customer service dengan natural language processing dan machine learning.',
-      en: 'Intelligent AI chatbot for customer service with natural language processing and machine learning.'
-    },
-    image: '/api/placeholder/400/300',
-    technologies: ['Python', 'TensorFlow', 'FastAPI', 'Redis', 'OpenAI'],
-    githubUrl: 'https://github.com/kancralabs/ai-chat-assistant',
-    demoUrl: 'https://ai-chat-demo.kancralabs.com',
-    category: 'AI & Machine Learning'
-  },
-  {
-    id: 4,
-    title: {
-      id: 'Cloud Management Dashboard',
-      en: 'Cloud Management Dashboard'
-    },
-    description: {
-      id: 'Dashboard manajemen cloud untuk monitoring server, database, dan infrastruktur dengan visualisasi real-time.',
-      en: 'Cloud management dashboard for monitoring servers, databases, and infrastructure with real-time visualization.'
-    },
-    image: '/api/placeholder/400/300',
-    technologies: ['React', 'D3.js', 'Go', 'Docker', 'Kubernetes'],
-    githubUrl: 'https://github.com/kancralabs/cloud-dashboard',
-    demoUrl: 'https://cloud-demo.kancralabs.com',
-    category: 'Cloud Solutions'
-  },
-  {
-    id: 5,
-    title: {
-      id: 'Learning Management System',
-      en: 'Learning Management System'
-    },
-    description: {
-      id: 'Platform pembelajaran online dengan fitur video streaming, quiz interaktif, dan tracking progress siswa.',
-      en: 'Online learning platform with video streaming features, interactive quizzes, and student progress tracking.'
-    },
-    image: '/api/placeholder/400/300',
-    technologies: ['Vue.js', 'Laravel', 'MySQL', 'WebRTC', 'AWS'],
-    githubUrl: 'https://github.com/kancralabs/lms-platform',
-    demoUrl: 'https://lms-demo.kancralabs.com',
-    category: 'Web Development'
-  },
-  {
-    id: 6,
-    title: {
-      id: 'IoT Monitoring System',
-      en: 'IoT Monitoring System'
-    },
-    description: {
-      id: 'Sistem monitoring IoT untuk industri dengan sensor data collection, analytics, dan alert system.',
-      en: 'IoT monitoring system for industry with sensor data collection, analytics, and alert system.'
-    },
-    image: '/api/placeholder/400/300',
-    technologies: ['JavaScript', 'MQTT', 'InfluxDB', 'Grafana', 'Arduino'],
-    githubUrl: 'https://github.com/kancralabs/iot-monitoring',
-    demoUrl: 'https://iot-demo.kancralabs.com',
-    category: 'IoT Solutions'
-  }
-];
-
 export default function Portfolio() {
   const { t, language } = useLanguage();
 
+  // Sample portfolio data with translation keys
+  const portfolioItems = [
+    {
+      id: 1,
+      titleKey: 'project.ecommerce.title',
+      descKey: 'project.ecommerce.desc',
+      image: '/api/placeholder/400/300',
+      technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'PostgreSQL', 'Stripe'],
+      githubUrl: 'https://github.com/kancralabs/ecommerce-platform',
+      demoUrl: 'https://ecommerce-demo.kancralabs.com',
+      category: 'Web Development'
+    },
+    {
+      id: 2,
+      titleKey: 'project.banking.title',
+      descKey: 'project.banking.desc',
+      image: '/api/placeholder/400/300',
+      technologies: ['React Native', 'Node.js', 'MongoDB', 'Socket.io'],
+      githubUrl: 'https://github.com/kancralabs/mobile-banking',
+      demoUrl: 'https://banking-demo.kancralabs.com',
+      category: 'Mobile Development'
+    },
+    {
+      id: 3,
+      titleKey: 'project.ai.title',
+      descKey: 'project.ai.desc',
+      image: '/api/placeholder/400/300',
+      technologies: ['Python', 'TensorFlow', 'FastAPI', 'Redis', 'OpenAI'],
+      githubUrl: 'https://github.com/kancralabs/ai-chat-assistant',
+      demoUrl: 'https://ai-chat-demo.kancralabs.com',
+      category: 'AI & Machine Learning'
+    },
+    {
+      id: 4,
+      titleKey: 'project.cloud.title',
+      descKey: 'project.cloud.desc',
+      image: '/api/placeholder/400/300',
+      technologies: ['React', 'D3.js', 'Go', 'Docker', 'Kubernetes'],
+      githubUrl: 'https://github.com/kancralabs/cloud-dashboard',
+      demoUrl: 'https://cloud-demo.kancralabs.com',
+      category: 'Cloud Solutions'
+    },
+    {
+      id: 5,
+      titleKey: 'project.lms.title',
+      descKey: 'project.lms.desc',
+      image: '/api/placeholder/400/300',
+      technologies: ['Vue.js', 'Laravel', 'MySQL', 'WebRTC', 'AWS'],
+      githubUrl: 'https://github.com/kancralabs/lms-platform',
+      demoUrl: 'https://lms-demo.kancralabs.com',
+      category: 'Web Development'
+    },
+    {
+      id: 6,
+      titleKey: 'project.iot.title',
+      descKey: 'project.iot.desc',
+      image: '/api/placeholder/400/300',
+      technologies: ['JavaScript', 'MQTT', 'InfluxDB', 'Grafana', 'Arduino'],
+      githubUrl: 'https://github.com/kancralabs/iot-monitoring',
+      demoUrl: 'https://iot-demo.kancralabs.com',
+      category: 'IoT Solutions'
+    }
+  ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-purple-900">
       {/* Background elements */}
@@ -168,11 +131,11 @@ export default function Portfolio() {
                 {/* Project Content */}
                 <div className="p-8">
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-200 transition-colors">
-                    {item.title[language]}
+                    {t(item.titleKey)}
                   </h3>
                   
                   <p className="text-gray-300 leading-relaxed mb-6">
-                    {item.description[language]}
+                    {t(item.descKey)}
                   </p>
 
                   {/* Technologies */}

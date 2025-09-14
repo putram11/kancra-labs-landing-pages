@@ -12,6 +12,13 @@ export default function Header() {
     setLanguage(language === 'id' ? 'en' : 'id');
   };
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-gradient-to-r from-black/80 via-gray-900/80 to-purple-900/80 border-b border-purple-500/20">
       <div className="container mx-auto px-6 py-4">
@@ -22,14 +29,14 @@ export default function Header() {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/about" className="relative group text-gray-300 hover:text-white transition-all duration-300">
+            <button onClick={() => scrollToSection('about')} className="relative group text-gray-300 hover:text-white transition-all duration-300">
               {t('nav.about')}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-purple-600 group-hover:w-full transition-all duration-300"></span>
-            </Link>
-            <Link href="/services" className="relative group text-gray-300 hover:text-white transition-all duration-300">
+            </button>
+            <button onClick={() => scrollToSection('services')} className="relative group text-gray-300 hover:text-white transition-all duration-300">
               {t('nav.services')}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-purple-600 group-hover:w-full transition-all duration-300"></span>
-            </Link>
+            </button>
             <Link href="/portfolio" className="relative group text-gray-300 hover:text-white transition-all duration-300">
               {t('nav.portfolio')}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-purple-600 group-hover:w-full transition-all duration-300"></span>
@@ -72,20 +79,24 @@ export default function Header() {
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4">
             <div className="flex flex-col space-y-4">
-              <Link 
-                href="/about" 
-                className="text-gray-300 hover:text-white transition-all duration-300 py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
+              <button 
+                onClick={() => {
+                  scrollToSection('about');
+                  setIsMobileMenuOpen(false);
+                }}
+                className="text-gray-300 hover:text-white transition-all duration-300 py-2 text-left"
               >
                 {t('nav.about')}
-              </Link>
-              <Link 
-                href="/services" 
-                className="text-gray-300 hover:text-white transition-all duration-300 py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
+              </button>
+              <button 
+                onClick={() => {
+                  scrollToSection('services');
+                  setIsMobileMenuOpen(false);
+                }}
+                className="text-gray-300 hover:text-white transition-all duration-300 py-2 text-left"
               >
                 {t('nav.services')}
-              </Link>
+              </button>
               <Link 
                 href="/portfolio" 
                 className="text-gray-300 hover:text-white transition-all duration-300 py-2"

@@ -66,6 +66,7 @@ const translations = {
     // Contact
     'contact.title': 'Siap Memulai Proyek Anda?',
     'contact.description': 'Mari diskusikan bagaimana kami dapat membantu mewujudkan visi teknologi Anda',
+    'contact.subtitle': 'Punya ide project menarik?',
     'contact.cta.contact': 'Hubungi Kami',
     'contact.cta.chat': 'Live Chat',
     'contact.email': 'Email',
@@ -89,7 +90,75 @@ const translations = {
     'portfolio.description': 'Lihat berbagai project yang telah kami kerjakan dengan teknologi terdepan',
     'portfolio.github': 'Lihat di GitHub',
     'portfolio.demo': 'Demo Live',
-    'portfolio.view': 'Lihat Project'
+    'portfolio.view': 'Lihat Project',
+    
+    // About Page
+    'about.title': 'Tentang Kancra Labs',
+    'about.subtitle': 'Kami adalah tim developer berpengalaman yang berfokus pada inovasi dan kualitas dalam setiap project',
+    'about.vision.title': 'Visi & Misi Kami',
+    'about.vision.description1': 'Kancra Labs didirikan dengan visi menjadi partner teknologi terpercaya untuk bisnis Indonesia. Kami percaya bahwa teknologi yang tepat dapat mengubah cara bisnis beroperasi dan memberikan dampak positif yang signifikan.',
+    'about.vision.description2': 'Misi kami adalah menghadirkan solusi perangkat lunak berkualitas tinggi yang tidak hanya memenuhi kebutuhan klien, tetapi juga melampaui ekspektasi mereka dengan pendekatan inovatif dan teknologi terdepan.',
+    'about.focus.title': 'Fokus Utama',
+    'about.focus.quality': '• Kualitas & Keandalan',
+    'about.focus.innovation': '• Inovasi Berkelanjutan',
+    'about.focus.satisfaction': '• Kepuasan Klien', 
+    'about.focus.technology': '• Teknologi Terdepan',
+    'about.values.innovation.title': 'Inovasi',
+    'about.values.innovation.desc': 'Selalu mencari cara baru dan lebih baik untuk menyelesaikan tantangan teknologi',
+    'about.values.expertise.title': 'Keahlian',
+    'about.values.expertise.desc': 'Tim berpengalaman dengan expertise mendalam di berbagai teknologi modern',
+    'about.values.collaboration.title': 'Kolaborasi',
+    'about.values.collaboration.desc': 'Bekerja sama dengan klien sebagai partner untuk mencapai tujuan bersama',
+    'about.team.title': 'Tim Expert',
+    'about.team.subtitle': 'Didukung oleh tim developer, designer, dan project manager berpengalaman',
+    'about.stats.projects': 'Project Selesai',
+    'about.stats.clients': 'Klien Puas',
+    'about.stats.experience': 'Tahun Pengalaman',
+    'about.stats.technologies': 'Teknologi Dikuasai',
+    'about.why.title': 'Mengapa Memilih Kancra Labs?',
+    'about.why.agile.title': 'Pendekatan Agile',
+    'about.why.agile.desc': 'Development dengan metodologi agile untuk hasil yang cepat dan berkualitas',
+    'about.why.support.title': '24/7 Support',
+    'about.why.support.desc': 'Tim support yang siap membantu kapanpun Anda membutuhkan',
+    'about.why.scalable.title': 'Scalable Architecture',
+    'about.why.scalable.desc': 'Arsitektur yang dapat berkembang seiring pertumbuhan bisnis Anda',
+    'about.why.modern.title': 'Modern Tech Stack',
+    'about.why.modern.desc': 'Menggunakan teknologi terbaru dan terbaik di industri',
+    'about.why.transparent.title': 'Transparent Process',
+    'about.why.transparent.desc': 'Proses development yang transparan dengan update berkala',
+    'about.why.postlaunch.title': 'Post-Launch Support',
+    'about.why.postlaunch.desc': 'Dukungan berkelanjutan setelah project selesai diluncurkan',
+    
+    // Portfolio Projects
+    'project.ecommerce.title': 'Platform E-Commerce',
+    'project.ecommerce.desc': 'Platform e-commerce modern dengan fitur lengkap, payment gateway terintegrasi, dan dashboard admin yang powerful.',
+    'project.banking.title': 'Aplikasi Mobile Banking',
+    'project.banking.desc': 'Aplikasi mobile banking dengan keamanan tinggi, fitur transfer, pembayaran, dan notifikasi real-time.',
+    'project.ai.title': 'AI Chat Assistant',
+    'project.ai.desc': 'Chatbot AI yang cerdas untuk customer service dengan natural language processing dan machine learning.',
+    'project.cloud.title': 'Cloud Management Dashboard',
+    'project.cloud.desc': 'Dashboard manajemen cloud untuk monitoring server, database, dan infrastruktur dengan visualisasi real-time.',
+    'project.lms.title': 'Learning Management System',
+    'project.lms.desc': 'Platform pembelajaran online dengan fitur video streaming, quiz interaktif, dan tracking progress siswa.',
+    'project.iot.title': 'IoT Monitoring System',
+    'project.iot.desc': 'Sistem monitoring IoT untuk industri dengan sensor data collection, analytics, dan alert system.',
+    
+    // Contact Form
+    'contact.form.title': 'Kirim Pesan',
+    'contact.form.name': 'Nama Lengkap',
+    'contact.form.email': 'Email',
+    'contact.form.phone': 'Nomor Telepon',
+    'contact.form.company': 'Perusahaan',
+    'contact.form.service': 'Layanan yang Dibutuhkan',
+    'contact.form.budget': 'Budget Range',
+    'contact.form.message': 'Pesan',
+    'contact.form.send': 'Kirim Pesan',
+    'contact.hours.title': 'Jam Operasional',
+    'contact.hours.weekday': 'Senin - Jumat',
+    'contact.hours.saturday': 'Sabtu',
+    'contact.hours.sunday': 'Minggu',
+    'contact.hours.emergency': 'Emergency Only',
+    'contact.quick.title': 'Kontak Cepat'
   },
   en: {
     // Navigation
@@ -143,6 +212,7 @@ const translations = {
     // Contact
     'contact.title': 'Ready to Start Your Project?',
     'contact.description': 'Let\'s discuss how we can help realize your technology vision',
+    'contact.subtitle': 'Have an interesting project idea?',
     'contact.cta.contact': 'Contact Us',
     'contact.cta.chat': 'Live Chat',
     'contact.email': 'Email',
@@ -166,7 +236,75 @@ const translations = {
     'portfolio.description': 'View various projects we have worked on with cutting-edge technology',
     'portfolio.github': 'View on GitHub',
     'portfolio.demo': 'Live Demo',
-    'portfolio.view': 'View Project'
+    'portfolio.view': 'View Project',
+    
+    // About Page
+    'about.title': 'About Kancra Labs',
+    'about.subtitle': 'We are an experienced developer team focused on innovation and quality in every project',
+    'about.vision.title': 'Our Vision & Mission',
+    'about.vision.description1': 'Kancra Labs was founded with the vision of becoming a trusted technology partner for Indonesian businesses. We believe that the right technology can transform how businesses operate and provide significant positive impact.',
+    'about.vision.description2': 'Our mission is to deliver high-quality software solutions that not only meet client needs, but also exceed their expectations with innovative approaches and cutting-edge technology.',
+    'about.focus.title': 'Main Focus',
+    'about.focus.quality': '• Quality & Reliability',
+    'about.focus.innovation': '• Continuous Innovation',
+    'about.focus.satisfaction': '• Client Satisfaction',
+    'about.focus.technology': '• Cutting-edge Technology',
+    'about.values.innovation.title': 'Innovation',
+    'about.values.innovation.desc': 'Always seeking new and better ways to solve technology challenges',
+    'about.values.expertise.title': 'Expertise',
+    'about.values.expertise.desc': 'Experienced team with deep expertise in various modern technologies',
+    'about.values.collaboration.title': 'Collaboration',
+    'about.values.collaboration.desc': 'Working together with clients as partners to achieve common goals',
+    'about.team.title': 'Expert Team',
+    'about.team.subtitle': 'Supported by experienced developers, designers, and project managers',
+    'about.stats.projects': 'Projects Completed',
+    'about.stats.clients': 'Happy Clients',
+    'about.stats.experience': 'Years Experience',
+    'about.stats.technologies': 'Technologies Mastered',
+    'about.why.title': 'Why Choose Kancra Labs?',
+    'about.why.agile.title': 'Agile Approach',
+    'about.why.agile.desc': 'Development with agile methodology for fast and quality results',
+    'about.why.support.title': '24/7 Support',
+    'about.why.support.desc': 'Support team ready to help whenever you need',
+    'about.why.scalable.title': 'Scalable Architecture',
+    'about.why.scalable.desc': 'Architecture that can grow with your business growth',
+    'about.why.modern.title': 'Modern Tech Stack',
+    'about.why.modern.desc': 'Using the latest and best technologies in the industry',
+    'about.why.transparent.title': 'Transparent Process',
+    'about.why.transparent.desc': 'Transparent development process with regular updates',
+    'about.why.postlaunch.title': 'Post-Launch Support',
+    'about.why.postlaunch.desc': 'Ongoing support after project is successfully launched',
+    
+    // Portfolio Projects
+    'project.ecommerce.title': 'E-Commerce Platform',
+    'project.ecommerce.desc': 'Modern e-commerce platform with complete features, integrated payment gateway, and powerful admin dashboard.',
+    'project.banking.title': 'Mobile Banking App',
+    'project.banking.desc': 'Mobile banking app with high security, transfer features, payments, and real-time notifications.',
+    'project.ai.title': 'AI Chat Assistant',
+    'project.ai.desc': 'Intelligent AI chatbot for customer service with natural language processing and machine learning.',
+    'project.cloud.title': 'Cloud Management Dashboard',
+    'project.cloud.desc': 'Cloud management dashboard for monitoring servers, databases, and infrastructure with real-time visualization.',
+    'project.lms.title': 'Learning Management System',
+    'project.lms.desc': 'Online learning platform with video streaming features, interactive quizzes, and student progress tracking.',
+    'project.iot.title': 'IoT Monitoring System',
+    'project.iot.desc': 'IoT monitoring system for industry with sensor data collection, analytics, and alert system.',
+    
+    // Contact Form
+    'contact.form.title': 'Send Message',
+    'contact.form.name': 'Full Name',
+    'contact.form.email': 'Email',
+    'contact.form.phone': 'Phone Number',
+    'contact.form.company': 'Company',
+    'contact.form.service': 'Required Service',
+    'contact.form.budget': 'Budget Range',
+    'contact.form.message': 'Message',
+    'contact.form.send': 'Send Message',
+    'contact.hours.title': 'Working Hours',
+    'contact.hours.weekday': 'Monday - Friday',
+    'contact.hours.saturday': 'Saturday',
+    'contact.hours.sunday': 'Sunday',
+    'contact.hours.emergency': 'Emergency Only',
+    'contact.quick.title': 'Quick Contact'
   }
 };
 
@@ -174,7 +312,8 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>('id');
 
   const t = (key: string): string => {
-    return translations[language][key as keyof typeof translations['id']] || key;
+    const translation = translations[language] as Record<string, string>;
+    return translation[key] || key;
   };
 
   return (
