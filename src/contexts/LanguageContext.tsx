@@ -44,6 +44,7 @@ const translations = {
     // Services
     'services.title': 'Layanan Kami',
     'services.description': 'Layanan komprehensif untuk memenuhi semua kebutuhan teknologi bisnis Anda',
+    'services.cta': 'Kembali ke Atas',
     'services.web.title': 'Web Development',
     'services.web.desc': 'Aplikasi web modern dengan performa tinggi dan UI/UX yang menarik',
     'services.mobile.title': 'Mobile Apps',
@@ -72,6 +73,7 @@ const translations = {
     'contact.email': 'Email',
     'contact.phone': 'Telepon',
     'contact.location': 'Lokasi',
+    'contact.form.success': 'Terima kasih! Pesan Anda telah terkirim. Tim kami akan segera menghubungi Anda.',
     
     // Footer
     'footer.description': 'Menghadirkan solusi perangkat lunak inovatif untuk transformasi digital bisnis Anda. Berpengalaman dalam teknologi terdepan dengan pendekatan profesional.',
@@ -105,10 +107,10 @@ const translations = {
     'about.focus.technology': '• Teknologi Terdepan',
     'about.values.innovation.title': 'Inovasi',
     'about.values.innovation.desc': 'Selalu mencari cara baru dan lebih baik untuk menyelesaikan tantangan teknologi',
-    'about.values.expertise.title': 'Keahlian',
-    'about.values.expertise.desc': 'Tim berpengalaman dengan expertise mendalam di berbagai teknologi modern',
     'about.values.collaboration.title': 'Kolaborasi',
     'about.values.collaboration.desc': 'Bekerja sama dengan klien sebagai partner untuk mencapai tujuan bersama',
+    'about.values.excellence.title': 'Keunggulan',
+    'about.values.excellence.desc': 'Berkomitmen untuk memberikan hasil terbaik dengan standar kualitas tinggi',
     'about.team.title': 'Tim Expert',
     'about.team.subtitle': 'Didukung oleh tim developer, designer, dan project manager berpengalaman',
     'about.stats.projects': 'Project Selesai',
@@ -190,6 +192,7 @@ const translations = {
     // Services
     'services.title': 'Our Services',
     'services.description': 'Comprehensive services to meet all your business technology needs',
+    'services.cta': 'Back to Top',
     'services.web.title': 'Web Development',
     'services.web.desc': 'Modern web applications with high performance and attractive UI/UX',
     'services.mobile.title': 'Mobile Apps',
@@ -218,6 +221,7 @@ const translations = {
     'contact.email': 'Email',
     'contact.phone': 'Phone',
     'contact.location': 'Location',
+    'contact.form.success': 'Thank you! Your message has been sent. Our team will contact you soon.',
     
     // Footer
     'footer.description': 'Delivering innovative software solutions for your business digital transformation. Experienced in cutting-edge technology with professional approach.',
@@ -251,10 +255,10 @@ const translations = {
     'about.focus.technology': '• Cutting-edge Technology',
     'about.values.innovation.title': 'Innovation',
     'about.values.innovation.desc': 'Always seeking new and better ways to solve technology challenges',
-    'about.values.expertise.title': 'Expertise',
-    'about.values.expertise.desc': 'Experienced team with deep expertise in various modern technologies',
     'about.values.collaboration.title': 'Collaboration',
     'about.values.collaboration.desc': 'Working together with clients as partners to achieve common goals',
+    'about.values.excellence.title': 'Excellence',
+    'about.values.excellence.desc': 'Committed to delivering the best results with high quality standards',
     'about.team.title': 'Expert Team',
     'about.team.subtitle': 'Supported by experienced developers, designers, and project managers',
     'about.stats.projects': 'Projects Completed',

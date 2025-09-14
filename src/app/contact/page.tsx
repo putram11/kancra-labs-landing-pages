@@ -29,7 +29,7 @@ export default function Contact() {
     e.preventDefault();
     // Handle form submission here
     console.log('Form submitted:', formData);
-    alert('Terima kasih! Pesan Anda telah terkirim. Tim kami akan segera menghubungi Anda.');
+    alert(t('contact.form.success'));
   };
 
   return (
@@ -73,12 +73,12 @@ export default function Contact() {
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Contact Form */}
               <div className="bg-gradient-to-br from-gray-800/40 to-gray-900/40 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50">
-                <h2 className="text-3xl font-bold text-white mb-8">Kirim Pesan</h2>
+                <h2 className="text-3xl font-bold text-white mb-8">{t('contact.form.title')}</h2>
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-gray-300 mb-2 font-medium">Nama Lengkap *</label>
+                      <label className="block text-gray-300 mb-2 font-medium">{t('contact.form.name')} *</label>
                       <input
                         type="text"
                         name="name"
@@ -91,7 +91,7 @@ export default function Contact() {
                     </div>
                     
                     <div>
-                      <label className="block text-gray-300 mb-2 font-medium">Email *</label>
+                      <label className="block text-gray-300 mb-2 font-medium">{t('contact.form.email')} *</label>
                       <input
                         type="email"
                         name="email"
@@ -106,7 +106,7 @@ export default function Contact() {
 
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-gray-300 mb-2 font-medium">Nomor Telepon</label>
+                      <label className="block text-gray-300 mb-2 font-medium">{t('contact.form.phone')}</label>
                       <input
                         type="tel"
                         name="phone"
@@ -118,7 +118,7 @@ export default function Contact() {
                     </div>
                     
                     <div>
-                      <label className="block text-gray-300 mb-2 font-medium">Perusahaan</label>
+                      <label className="block text-gray-300 mb-2 font-medium">{t('contact.form.company')}</label>
                       <input
                         type="text"
                         name="company"
@@ -132,7 +132,7 @@ export default function Contact() {
 
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-gray-300 mb-2 font-medium">Layanan yang Dibutuhkan</label>
+                      <label className="block text-gray-300 mb-2 font-medium">{t('contact.form.service')}</label>
                       <select
                         name="service"
                         value={formData.service}
@@ -151,7 +151,7 @@ export default function Contact() {
                     </div>
                     
                     <div>
-                      <label className="block text-gray-300 mb-2 font-medium">Budget Range</label>
+                      <label className="block text-gray-300 mb-2 font-medium">{t('contact.form.budget')}</label>
                       <select
                         name="budget"
                         value={formData.budget}
@@ -170,7 +170,7 @@ export default function Contact() {
                   </div>
 
                   <div>
-                    <label className="block text-gray-300 mb-2 font-medium">Pesan *</label>
+                    <label className="block text-gray-300 mb-2 font-medium">{t('contact.form.message')} *</label>
                     <textarea
                       name="message"
                       required
@@ -187,7 +187,7 @@ export default function Contact() {
                     className="w-full group bg-gradient-to-r from-purple-600 to-purple-700 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-purple-700 hover:to-purple-800 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-purple-500/25"
                   >
                     <span className="flex items-center justify-center gap-2">
-                      Kirim Pesan
+                      {t('contact.form.send')}
                       <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
                       </svg>
