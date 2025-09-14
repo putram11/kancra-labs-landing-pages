@@ -41,10 +41,10 @@ export default function Header() {
               {t('nav.portfolio')}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-purple-600 group-hover:w-full transition-all duration-300"></span>
             </Link>
-            <Link href="/contact" className="relative group text-gray-300 hover:text-white transition-all duration-300">
+            <button onClick={() => scrollToSection('contact')} className="relative group text-gray-300 hover:text-white transition-all duration-300">
               {t('nav.contact')}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-purple-600 group-hover:w-full transition-all duration-300"></span>
-            </Link>
+            </button>
             
             {/* Language Toggle */}
             <button
@@ -104,13 +104,15 @@ export default function Header() {
               >
                 {t('nav.portfolio')}
               </Link>
-              <Link 
-                href="/contact" 
-                className="text-gray-300 hover:text-white transition-all duration-300 py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
+              <button 
+                onClick={() => {
+                  scrollToSection('contact');
+                  setIsMobileMenuOpen(false);
+                }}
+                className="text-gray-300 hover:text-white transition-all duration-300 py-2 text-left"
               >
                 {t('nav.contact')}
-              </Link>
+              </button>
               
               {/* Mobile Language Toggle */}
               <button

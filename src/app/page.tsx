@@ -368,13 +368,13 @@ export default function Home() {
                 color: 'from-yellow-500 to-orange-600'
               }
             ].map((service, index) => (
-              <div key={index} className="group bg-gradient-to-br from-gray-800/40 to-gray-900/40 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50 hover:border-purple-500/50 transition-all duration-500 hover:transform hover:scale-105 relative overflow-hidden">
+              <div key={index} className="group bg-gradient-to-br from-gray-800/40 to-gray-900/40 backdrop-blur-sm p-8 rounded-2xl border border-gray-700/50 hover:border-purple-500/50 transition-all duration-500 hover:transform hover:scale-105 relative overflow-hidden h-full min-h-[280px] flex flex-col">
                 <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${service.color} opacity-10 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500`}>
                 </div>
-                <div className="relative z-10">
+                <div className="relative z-10 flex flex-col h-full">
                   <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
                   <h3 className="text-2xl font-bold text-white mb-4">{t(service.titleKey)}</h3>
-                  <p className="text-gray-300 leading-relaxed">{t(service.descKey)}</p>
+                  <p className="text-gray-300 leading-relaxed flex-grow">{t(service.descKey)}</p>
                 </div>
               </div>
             ))}
@@ -382,14 +382,95 @@ export default function Home() {
 
           {/* CTA Button */}
           <AnimatedSection animation="fadeInUp" delay={800} className="text-center mt-16">
-            <button onClick={() => scrollToSection('home')} className="group bg-gradient-to-r from-purple-600 to-purple-700 text-white px-8 py-3 rounded-full font-semibold hover:from-purple-700 hover:to-purple-800 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-purple-500/25">
-              <span className="flex items-center justify-center gap-2">
-                {t('Back to Top')}
-                <svg className="w-5 h-5 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+            <button onClick={() => scrollToSection('contact')} className="group bg-gradient-to-r from-purple-600 to-purple-700 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-purple-700 hover:to-purple-800 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-purple-500/25">
+              <span className="flex items-center justify-center gap-3">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+                {t('services.cta')}
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </span>
             </button>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Portfolio Preview Section */}
+      <section className="relative z-10 py-20 bg-gradient-to-r from-black/20 to-purple-900/20">
+        <div className="container mx-auto px-6">
+          <AnimatedSection animation="fadeInUp" className="text-center mb-16">
+            <div className="inline-block mb-8">
+              <span className="bg-gradient-to-r from-purple-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-medium shadow-lg">
+                {t('nav.portfolio')}
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              {t('portfolio.title')}
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              {t('portfolio.description')}
+            </p>
+          </AnimatedSection>
+
+          {/* Featured Projects Grid */}
+          <StaggeredContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16" staggerDelay={200}>
+            {[
+              {
+                titleKey: 'project.ecommerce.title',
+                descKey: 'project.ecommerce.desc',
+                tech: ['React', 'Node.js', 'MongoDB'],
+                image: '🛒',
+                color: 'from-blue-500 to-purple-600'
+              },
+              {
+                titleKey: 'project.lms.title',
+                descKey: 'project.lms.desc',
+                tech: ['Vue.js', 'Laravel', 'MySQL'],
+                image: '📚',
+                color: 'from-green-500 to-blue-600'
+              },
+              {
+                titleKey: 'project.iot.title',
+                descKey: 'project.iot.desc',
+                tech: ['IoT', 'Python', 'AWS'],
+                image: '🌐',
+                color: 'from-orange-500 to-red-600'
+              }
+            ].map((project, index) => (
+              <div key={index} className="group bg-gradient-to-br from-gray-800/40 to-gray-900/40 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50 hover:border-purple-500/50 transition-all duration-500 hover:transform hover:scale-105 relative overflow-hidden">
+                <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${project.color} opacity-10 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-500`}>
+                </div>
+                <div className="relative z-10">
+                  <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300">{project.image}</div>
+                  <h3 className="text-xl font-bold text-white mb-3">{t(project.titleKey)}</h3>
+                  <p className="text-gray-300 text-sm mb-4 leading-relaxed">{t(project.descKey)}</p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tech.map((tech, techIndex) => (
+                      <span key={techIndex} className="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-xs font-medium border border-purple-500/30">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </StaggeredContainer>
+
+          {/* View More Button */}
+          <AnimatedSection animation="fadeInUp" delay={600} className="text-center">
+            <Link href="/portfolio" className="group bg-gradient-to-r from-purple-600 to-purple-700 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-purple-700 hover:to-purple-800 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-purple-500/25">
+              <span className="flex items-center justify-center gap-3">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0l-4-4m4 4l-4 4" />
+                </svg>
+                {t('portfolio.viewAll')}
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </span>
+            </Link>
           </AnimatedSection>
         </div>
       </section>

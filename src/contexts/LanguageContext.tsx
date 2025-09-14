@@ -42,9 +42,10 @@ const translations = {
     'tech.description': 'Kami menggunakan teknologi terdepan untuk membangun solusi yang scalable dan modern',
     
     // Services
+        // Services
     'services.title': 'Layanan Kami',
-    'services.description': 'Layanan komprehensif untuk memenuhi semua kebutuhan teknologi bisnis Anda',
-    'services.cta': 'Kembali ke Atas',
+    'services.description': 'Solusi teknologi lengkap untuk transformasi digital bisnis Anda dengan pendekatan inovatif dan teknologi terdepan.',
+    'services.cta': 'Mulai Konsultasi',
     'services.web.title': 'Web Development',
     'services.web.desc': 'Aplikasi web modern dengan performa tinggi dan UI/UX yang menarik',
     'services.mobile.title': 'Mobile Apps',
@@ -160,7 +161,10 @@ const translations = {
     'contact.hours.saturday': 'Sabtu',
     'contact.hours.sunday': 'Minggu',
     'contact.hours.emergency': 'Emergency Only',
-    'contact.quick.title': 'Kontak Cepat'
+    'contact.quick.title': 'Kontak Cepat',
+    
+    // Portfolio Preview
+    'portfolio.viewAll': 'Lihat Semua Portfolio'
   },
   en: {
     // Navigation
@@ -192,7 +196,7 @@ const translations = {
     // Services
     'services.title': 'Our Services',
     'services.description': 'Comprehensive services to meet all your business technology needs',
-    'services.cta': 'Back to Top',
+    'services.cta': 'Start Consultation',
     'services.web.title': 'Web Development',
     'services.web.desc': 'Modern web applications with high performance and attractive UI/UX',
     'services.mobile.title': 'Mobile Apps',
@@ -308,7 +312,10 @@ const translations = {
     'contact.hours.saturday': 'Saturday',
     'contact.hours.sunday': 'Sunday',
     'contact.hours.emergency': 'Emergency Only',
-    'contact.quick.title': 'Quick Contact'
+    'contact.quick.title': 'Quick Contact',
+    
+    // Portfolio Preview
+    'portfolio.viewAll': 'View All Portfolio'
   }
 };
 
