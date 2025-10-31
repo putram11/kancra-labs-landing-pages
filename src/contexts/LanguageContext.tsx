@@ -143,6 +143,8 @@ const translations = {
     'project.cloud.desc': 'Dashboard manajemen cloud untuk monitoring server, database, dan infrastruktur dengan visualisasi real-time.',
     'project.lms.title': 'Learning Management System',
     'project.lms.desc': 'Platform pembelajaran online dengan fitur video streaming, quiz interaktif, dan tracking progress siswa.',
+    'project.erp.title': 'Sistem ERP Terintegrasi',
+    'project.erp.desc': 'Sistem Enterprise Resource Planning untuk mengelola seluruh aspek bisnis dengan modul keuangan, inventory, dan HR.',
     'project.iot.title': 'IoT Monitoring System',
     'project.iot.desc': 'Sistem monitoring IoT untuk industri dengan sensor data collection, analytics, dan alert system.',
     
@@ -294,6 +296,8 @@ const translations = {
     'project.cloud.desc': 'Cloud management dashboard for monitoring servers, databases, and infrastructure with real-time visualization.',
     'project.lms.title': 'Learning Management System',
     'project.lms.desc': 'Online learning platform with video streaming features, interactive quizzes, and student progress tracking.',
+    'project.erp.title': 'Integrated ERP System',
+    'project.erp.desc': 'Enterprise Resource Planning system to manage all business aspects with financial, inventory, and HR modules.',
     'project.iot.title': 'IoT Monitoring System',
     'project.iot.desc': 'IoT monitoring system for industry with sensor data collection, analytics, and alert system.',
     

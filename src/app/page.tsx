@@ -414,10 +414,10 @@ export default function Home() {
                 color: 'from-green-500 to-blue-600'
               },
               {
-                titleKey: 'project.iot.title',
-                descKey: 'project.iot.desc',
-                tech: ['IoT', 'Python', 'AWS'],
-                image: '🌐',
+                titleKey: 'project.erp.title',
+                descKey: 'project.erp.desc',
+                tech: ['React', 'Python', 'PostgreSQL'],
+                image: '🏢',
                 color: 'from-orange-500 to-red-600'
               }
             ].map((project, index) => (
