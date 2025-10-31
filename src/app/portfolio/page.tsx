@@ -8,67 +8,57 @@ import Link from 'next/link';
 export default function Portfolio() {
   const { t, language } = useLanguage();
 
-  // Sample portfolio data with translation keys
+  // Real portfolio data with actual projects
   const portfolioItems = [
     {
       id: 1,
-      titleKey: 'project.ecommerce.title',
-      descKey: 'project.ecommerce.desc',
+      titleKey: 'project.taniverse.title',
+      descKey: 'project.taniverse.desc',
       image: '/api/placeholder/400/300',
-      technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'PostgreSQL', 'Stripe'],
-      githubUrl: 'https://github.com/kancralabs/ecommerce-platform',
-      demoUrl: 'https://ecommerce-demo.kancralabs.com',
-      category: 'Web Development'
+      technologies: ['Next.js', 'TypeScript', 'AI/ML', 'IoT', 'TensorFlow'],
+      githubUrl: 'https://github.com/kancralabs/taniverse',
+      demoUrl: 'https://taniverse.id/',
+      category: 'AI & Agriculture'
     },
     {
       id: 2,
-      titleKey: 'project.banking.title',
-      descKey: 'project.banking.desc',
+      titleKey: 'project.kancraone.title',
+      descKey: 'project.kancraone.desc',
       image: '/api/placeholder/400/300',
-      technologies: ['React Native', 'Node.js', 'MongoDB', 'Socket.io'],
-      githubUrl: 'https://github.com/kancralabs/mobile-banking',
-      demoUrl: 'https://banking-demo.kancralabs.com',
-      category: 'Mobile Development'
+      technologies: ['React', 'Node.js', 'PostgreSQL', 'Docker', 'Microservices'],
+      githubUrl: 'https://github.com/kancralabs/kancraone',
+      demoUrl: 'https://kancraone-landing-page.vercel.app/',
+      category: 'ERP System'
     },
     {
       id: 3,
-      titleKey: 'project.ai.title',
-      descKey: 'project.ai.desc',
+      titleKey: 'project.jualin.title',
+      descKey: 'project.jualin.desc',
       image: '/api/placeholder/400/300',
-      technologies: ['Python', 'TensorFlow', 'FastAPI', 'Redis', 'OpenAI'],
-      githubUrl: 'https://github.com/kancralabs/ai-chat-assistant',
-      demoUrl: 'https://ai-chat-demo.kancralabs.com',
-      category: 'AI & Machine Learning'
+      technologies: ['Vue.js', 'Laravel', 'MySQL', 'Payment Gateway', 'Redis'],
+      githubUrl: 'https://github.com/kancralabs/jualin',
+      demoUrl: 'https://jualin-frontend.vercel.app/',
+      category: 'E-Commerce'
     },
     {
       id: 4,
-      titleKey: 'project.cloud.title',
-      descKey: 'project.cloud.desc',
+      titleKey: 'project.possystem.title',
+      descKey: 'project.possystem.desc',
       image: '/api/placeholder/400/300',
-      technologies: ['React', 'D3.js', 'Go', 'Docker', 'Kubernetes'],
-      githubUrl: 'https://github.com/kancralabs/cloud-dashboard',
-      demoUrl: 'https://cloud-demo.kancralabs.com',
-      category: 'Cloud Solutions'
+      technologies: ['React', 'Express.js', 'MongoDB', 'Socket.io', 'Stripe'],
+      githubUrl: 'https://github.com/kancralabs/pos-system',
+      demoUrl: 'https://pos-systems.vercel.app/',
+      category: 'Point of Sale'
     },
     {
       id: 5,
-      titleKey: 'project.lms.title',
-      descKey: 'project.lms.desc',
+      titleKey: 'project.erpwarteg.title',
+      descKey: 'project.erpwarteg.desc',
       image: '/api/placeholder/400/300',
-      technologies: ['Vue.js', 'Laravel', 'MySQL', 'WebRTC', 'AWS'],
-      githubUrl: 'https://github.com/kancralabs/lms-platform',
-      demoUrl: 'https://lms-demo.kancralabs.com',
-      category: 'Web Development'
-    },
-    {
-      id: 6,
-      titleKey: 'project.iot.title',
-      descKey: 'project.iot.desc',
-      image: '/api/placeholder/400/300',
-      technologies: ['JavaScript', 'MQTT', 'InfluxDB', 'Grafana', 'Arduino'],
-      githubUrl: 'https://github.com/kancralabs/iot-monitoring',
-      demoUrl: 'https://iot-demo.kancralabs.com',
-      category: 'IoT Solutions'
+      technologies: ['Next.js', 'Prisma', 'PostgreSQL', 'Tailwind CSS', 'Chart.js'],
+      githubUrl: 'https://github.com/kancralabs/erp-warteg',
+      demoUrl: 'https://erp-warteg.vercel.app/',
+      category: 'Restaurant ERP'
     }
   ];
   return (

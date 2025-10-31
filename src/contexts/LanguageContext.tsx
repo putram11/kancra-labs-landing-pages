@@ -133,6 +133,16 @@ const translations = {
     'about.why.postlaunch.desc': 'Dukungan berkelanjutan setelah project selesai diluncurkan',
     
     // Portfolio Projects
+    'project.taniverse.title': 'Taniverse - Platform Pertanian Digital',
+    'project.taniverse.desc': 'Platform digital revolusioner yang menghubungkan petani ke pasar global dan meningkatkan produktivitas melalui teknologi AI dan IoT. Dilengkapi dengan data pasar real-time, e-commerce, dan tools AI untuk deteksi hama serta kondisi tanah.',
+    'project.kancraone.title': 'KancraOne ERP System',
+    'project.kancraone.desc': 'Sistem Enterprise Resource Planning modern, modular, dan scalable yang dirancang untuk menyederhanakan dan mendigitalkan operasi bisnis yang kompleks dengan arsitektur microservices.',
+    'project.jualin.title': 'Jualin - Platform Marketplace',
+    'project.jualin.desc': 'Platform marketplace lengkap untuk menjual mobil, properti, hingga barang bekas dalam satu tempat. Listing gratis, proses instan, transaksi aman dengan ribuan pembeli aktif.',
+    'project.possystem.title': 'Modern POS System',
+    'project.possystem.desc': 'Sistem Point of Sale modern dengan interface intuitif, manajemen inventory real-time, laporan penjualan detail, dan integrasi payment gateway untuk bisnis retail.',
+    'project.erpwarteg.title': 'ERP Warteg Management',
+    'project.erpwarteg.desc': 'Sistem ERP khusus untuk manajemen warteg dan rumah makan kecil. Mencakup manajemen menu, stok bahan, penjualan harian, dan laporan keuangan yang komprehensif.',
     'project.ecommerce.title': 'Platform E-Commerce',
     'project.ecommerce.desc': 'Platform e-commerce modern dengan fitur lengkap, payment gateway terintegrasi, dan dashboard admin yang powerful.',
     'project.banking.title': 'Aplikasi Mobile Banking',
@@ -286,6 +296,16 @@ const translations = {
     'about.why.postlaunch.desc': 'Ongoing support after project is successfully launched',
     
     // Portfolio Projects
+    'project.taniverse.title': 'Taniverse - Digital Agriculture Platform',
+    'project.taniverse.desc': 'Revolutionary digital platform that connects farmers to global markets and boosts productivity through AI and IoT technologies. Features real-time market data, e-commerce, and AI tools for pest detection and soil conditions.',
+    'project.kancraone.title': 'KancraOne ERP System',
+    'project.kancraone.desc': 'Modern, modular, and scalable Enterprise Resource Planning system designed to streamline and digitize complex business operations with microservices architecture.',
+    'project.jualin.title': 'Jualin - Marketplace Platform',
+    'project.jualin.desc': 'Complete marketplace platform for selling cars, properties, and second-hand goods in one place. Free listing, instant process, secure transactions with thousands of active buyers.',
+    'project.possystem.title': 'Modern POS System',
+    'project.possystem.desc': 'Modern Point of Sale system with intuitive interface, real-time inventory management, detailed sales reports, and payment gateway integration for retail businesses.',
+    'project.erpwarteg.title': 'ERP Warteg Management',
+    'project.erpwarteg.desc': 'Specialized ERP system for warteg and small restaurant management. Includes menu management, ingredient stock, daily sales, and comprehensive financial reporting.',
     'project.ecommerce.title': 'E-Commerce Platform',
     'project.ecommerce.desc': 'Modern e-commerce platform with complete features, integrated payment gateway, and powerful admin dashboard.',
     'project.banking.title': 'Mobile Banking App',
