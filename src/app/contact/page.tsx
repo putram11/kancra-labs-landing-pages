@@ -17,6 +17,31 @@ export default function Contact() {
     message: ''
   });
 
+  const getServiceLabel = (value: string) => {
+    const services: { [key: string]: string } = {
+      'web-development': 'Web Development',
+      'mobile-apps': 'Mobile Apps',
+      'cloud-solutions': 'Cloud Solutions',
+      'ai-ml': 'AI & Machine Learning',
+      'devops': 'DevOps & CI/CD',
+      'consulting': 'Consulting',
+      'other': 'Lainnya'
+    };
+    return services[value] || value;
+  };
+
+  const getBudgetLabel = (value: string) => {
+    const budgets: { [key: string]: string } = {
+      'under-10m': '< 10 Juta',
+      '10m-25m': '10 - 25 Juta',
+      '25m-50m': '25 - 50 Juta',
+      '50m-100m': '50 - 100 Juta',
+      'above-100m': '> 100 Juta',
+      'discuss': 'Diskusi Lebih Lanjut'
+    };
+    return budgets[value] || value;
+  };
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -27,9 +52,45 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
+    
+    // Format message for WhatsApp
+    const whatsappMessage = `Halo Kancra Labs! 👋
+
+Saya tertarik untuk bekerja sama dengan Anda.
+
+📋 *Detail Informasi:*
+👤 Nama: ${formData.name}
+📧 Email: ${formData.email}
+📱 Telepon: ${formData.phone || 'Tidak disebutkan'}
+🏢 Perusahaan: ${formData.company || 'Tidak disebutkan'}
+💼 Layanan: ${formData.service ? getServiceLabel(formData.service) : 'Belum dipilih'}
+💰 Budget: ${formData.budget ? getBudgetLabel(formData.budget) : 'Belum ditentukan'}
+
+💬 *Pesan:*
+${formData.message}
+
+Terima kasih! Saya menunggu respons dari tim Kancra Labs.`;
+
+    // Encode message for WhatsApp URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const whatsappURL = `https://wa.me/6285730839962?text=${encodedMessage}`;
+    
+    // Open WhatsApp
+    window.open(whatsappURL, '_blank');
+    
+    // Show success message
     alert(t('contact.form.success'));
+    
+    // Reset form
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      company: '',
+      service: '',
+      budget: '',
+      message: ''
+    });
   };
 
   return (
@@ -220,7 +281,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="text-white font-semibold text-lg mb-1">{t('contact.phone')}</h3>
-                      <p className="text-gray-300">+62 851-7511-1378</p>
+                      <p className="text-gray-300">62 857-3083-9962</p>
                     </div>
                   </div>
 
@@ -262,7 +323,7 @@ export default function Contact() {
                   <h3 className="text-2xl font-bold text-white mb-6">Kontak Cepat</h3>
                   <div className="space-y-4">
                     <a
-                      href="https://wa.me/6285175111378"
+                      href="https://wa.me/6285730839962?text=Halo%20Kancra%20Labs!%20%F0%9F%91%8B%0A%0ASaya%20tertarik%20untuk%20mengetahui%20lebih%20lanjut%20tentang%20layanan%20software%20development%20yang%20Anda%20tawarkan.%20%0A%0ABisakah%20kita%20berdiskusi%20lebih%20lanjut%20mengenai%20project%20yang%20saya%20butuhkan%3F%0A%0ATerima%20kasih!"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full group bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
